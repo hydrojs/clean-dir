@@ -1,0 +1,30 @@
+{
+  "name": "hydro-clean-dir",
+  "version": "0.0.0",
+  "description": "Empty given directories after each test",
+   "keywords": [
+    "hydroplugin",
+    "hydro",
+    "clean directories"
+  ],
+  "main": "./index.js",
+  "homepage": "https://github.com/hydrojs/hydro-clean-dir",
+  "scripts": {
+    "test": "hydro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hydrojs/hydro-clean-dir"
+  },
+  "peerDependencies": {
+    "hydro": "0.x"
+  },
+  "devDependencies": {
+    "coveralls": "~2.3.0",
+    "istanbul": "~0.1.46",
+    "hydro": "*",
+    "hydro-simple": "*"
+  },
+  "author": "Veselin Todorov <hi@vesln.com>",
+  "license": "MIT"
+}
