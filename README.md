@@ -9,6 +9,8 @@ version](https://badge.fury.io/js/hydro-clean-dir.png)](http://badge.fury.io/js/
 
 Empty given directories after each test.
 
+Useful to clean local tmp locations.
+
 ## Usage
 
 Config:
@@ -16,6 +18,10 @@ Config:
 ```js
 hydro.set({
   plugins: ['hydro-clean-dir'],
+  cleanDir: {
+    keepDot: true // keep dot files, default: false
+    paths: [join('test', 'tmp')] // array of paths to directories
+  }
 });
 ```
 
