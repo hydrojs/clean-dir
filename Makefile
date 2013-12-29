@@ -2,9 +2,9 @@
 # Paths
 #
 
+COV = node_modules/.bin/istanbul
 COV_EXEC = node_modules/.bin/_hydro
 TEST_EXEC = node_modules/.bin/hydro
-ISTANBUL = node_modules/.bin/istanbul
 COVERALLS = node_modules/coveralls/bin/coveralls.js
 
 #
@@ -31,6 +31,13 @@ test: test-node
 
 test-node: node_modules
 	@$(TEST_EXEC)
+
+#
+# Test coverage
+#
+
+test-cov: node_modules
+	@$(COV) cover $(COV_EXEC)
 
 #
 # Clean all
@@ -63,7 +70,7 @@ ci: test-node coveralls
 #
 
 coveralls: node_modules
-	@$(ISTANBUL) cover $(COV_EXEC) --report lcovonly && cat ./coverage/lcov.info | $(COVERALLS)
+	@$(COV) cover $(COV_EXEC) --report lcovonly && cat ./coverage/lcov.info | $(COVERALLS)
 
 #
 # Install Node.js modules
