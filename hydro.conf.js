@@ -1,4 +1,10 @@
 /**
+ * Core dependencies.
+ */
+
+var join = require('path').join;
+
+/**
  * Test config.
  *
  * @param {Object} hydro
@@ -10,6 +16,10 @@ module.exports = function(hydro) {
     attach: global,
     proxies: {
       test: 'addTest'
+    },
+    cleanDir: {
+      keepDot: true,
+      paths: [ join(__dirname, 'test', 'tmp') ]
     },
     suite: 'hydro-clean-dir',
     formatter: 'hydro-simple',

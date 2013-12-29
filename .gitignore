@@ -4,3 +4,5 @@
 /components/
 *.tmp.js
 npm-debug.log
+test/tmp/*
+!test/tmp/.keep

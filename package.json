@@ -2,7 +2,7 @@
   "name": "hydro-clean-dir",
   "version": "0.0.0",
   "description": "Empty given directories after each test",
-   "keywords": [
+  "keywords": [
     "hydroplugin",
     "hydro",
     "clean directories"
@@ -26,5 +26,8 @@
     "hydro-simple": "*"
   },
   "author": "Veselin Todorov <hi@vesln.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "rimraf": "~2.2.5"
+  }
 }
