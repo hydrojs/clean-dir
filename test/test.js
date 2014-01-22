@@ -8,6 +8,7 @@ test('write files', function(done) {
   fs.writeFileSync(join(dest, '.dot'));
   fs.mkdirSync(join(dest, 'sub'));
   fs.writeFileSync(join(dest, 'sub', 'third.js'));
+  fs.symlinkSync('./foo.js', join(dest, 'sym'))
   done();
 });
 

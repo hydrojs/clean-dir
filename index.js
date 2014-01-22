@@ -30,7 +30,7 @@ module.exports = function(hydro) {
       fs.readdirSync(path).forEach(function(file) {
         if (file[0] === '.' && keepDot) return;
         var full = join(path, file);
-        if (fs.statSync(full).isDirectory()) rmrf.sync(full);
+        if (fs.lstatSync(full).isDirectory()) rmrf.sync(full);
         else fs.unlinkSync(full);
       });
     });
